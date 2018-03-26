@@ -9,7 +9,7 @@ Repositório para analisador sintático, a ser apresentado na matéria de compil
 
 # Bônus: o programa deve apresentar a AST da sentença de entrada (graficamente).
 
-E        ::= E OPERADOR E | E | '(' E ')' | INCOGNITA | NUMERO
-OPERADOR ::= '+' | '-' | '*' | '/'
-INCOGNITA ::= 'x' | 'y'
-NUMERO   ::= [0-9]+
+ E        ::= E OPERADOR E | E | '(' E ')' | INCOGNITA | NUMERO
+ OPERADOR ::= '+' | '-' | '*' | '/'
+ INCOGNITA ::= 'x' | 'y'
+ NUMERO   ::= [0-9]+
