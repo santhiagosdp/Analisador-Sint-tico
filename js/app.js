@@ -35,10 +35,13 @@ const TIPO_INCOGNITA = 'INCOGNITA';
 		else{
             tipo_token = "Terminal";
         }
-		/* if(posicao_token == array_tokens){ */
-			imprime+="<tr><td>"+token+"</td><td>"+tipo_token+"</td><td>"+posicao_token+"</td><td>"+esperado+"</td></tr>"
-			imprime+="<tr><td></td><td></td><td></td><td>"+array_tokens.length+" - ok ok ok</td></tr>"
-		/* }				 */
+		if(posicao_token == array_tokens.length-1){
+			imprime+="<tr><td>"+token+"</td><td>"+tipo_token+"</td><td>"+posicao_token+"</td><td>"+esperado+"</td></tr>";
+			imprime+="<tr><td></td><td></td><td></td><td>"+array_tokens.length+" - ok ok ok</td></tr>";
+		}
+		else{
+			imprime+="<tr><td>"+token+"</td><td>"+tipo_token+"</td><td>"+posicao_token+"</td><td>"+esperado+"</td></tr>";
+		}
 				posicao_token +=1;
 				esperado="";
     }
