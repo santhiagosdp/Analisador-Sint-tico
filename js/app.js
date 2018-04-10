@@ -14,6 +14,7 @@ const TIPO_INCOGNITA = 'INCOGNITA';
     var tipo_token = '-';
     var posicao_token = 0;
 	var esperado="";
+	var sintatico="Valor valido para gramatica!";
 		var lista_tokens = [];
 		var imprime="<table class='table table-bordered'><tr><th>Token</th><th>identificador</th><th>posicao</th><th>Esperado</th></tr>";
     for(token of array_tokens){
@@ -24,7 +25,7 @@ const TIPO_INCOGNITA = 'INCOGNITA';
 			}
         }
         else if(eh_operador(token)){
-			if(tipo_token ="INCOGNITA"){
+			if(tipo_token ="INCOGNITA"){ /* Se token anterior for Incognita */
 				esperado='Opções de E';
 				tipo_token = TIPO_OPERADOR;
 			}
@@ -37,7 +38,7 @@ const TIPO_INCOGNITA = 'INCOGNITA';
         }
 		if(posicao_token == array_tokens.length-1){
 			imprime+="<tr><td>"+token+"</td><td>"+tipo_token+"</td><td>"+posicao_token+"</td><td>"+esperado+"</td></tr>";
-			imprime+="<tr><td></td><td></td><td></td><td>"+array_tokens.length+" - ok ok ok</td></tr>";
+			alert(sintatico);
 		}
 		else{
 			imprime+="<tr><td>"+token+"</td><td>"+tipo_token+"</td><td>"+posicao_token+"</td><td>"+esperado+"</td></tr>";
